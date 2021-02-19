@@ -1,0 +1,34 @@
+entity Question {
+	id Long
+	libelle String
+    date LocalDate 
+    cloturer Boolean 
+    
+}
+entity Commentaire {
+	id Long
+	libelle String
+    date LocalDate 
+    vote Integer 
+    
+}
+
+entity Techno {
+	id Long
+	libelle String
+    publish Boolean 
+    
+}
+
+entity Langage {
+	id Long
+	libelle String
+    publish Boolean 
+    
+}
+
+relationship OneToMany {
+	Question to Techno{question},
+    Question to Langage{question},
+    Question to Commentaire{question}
+}

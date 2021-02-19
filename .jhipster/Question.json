@@ -1,0 +1,48 @@
+{
+  "name": "Question",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "cloturer",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "techno",
+      "otherEntityRelationshipName": "question",
+      "relationshipName": "techno"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "langage",
+      "otherEntityRelationshipName": "question",
+      "relationshipName": "langage"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "commentaire",
+      "otherEntityRelationshipName": "question",
+      "relationshipName": "commentaire"
+    }
+  ],
+  "changelogDate": "20210203212410",
+  "entityTableName": "question",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

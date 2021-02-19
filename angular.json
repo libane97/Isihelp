@@ -1,0 +1,37 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "isi-help": {
+      "root": "",
+      "sourceRoot": "src/main/webapp",
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "skipTests": true,
+          "style": "scss"
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "prefix": "jhi",
+      "architect": {}
+    }
+  },
+  "defaultProject": "isi-help",
+  "cli": {
+    "packageManager": "npm",
+    "analytics": "c59fa5d1-85d9-4dbf-8880-eee33c9fc322"
+  }
+}

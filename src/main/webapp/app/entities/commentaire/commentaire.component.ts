@@ -16,7 +16,7 @@ export class CommentaireComponent implements OnInit, OnDestroy {
   commentaires?: ICommentaire[];
   eventSubscriber?: Subscription;
   isSaving = false;
-
+  message: boolean = false;
   constructor(
     protected commentaireService: CommentaireService,
     protected eventManager: JhiEventManager,
@@ -59,6 +59,7 @@ export class CommentaireComponent implements OnInit, OnDestroy {
     this.isSaving = true;
     commentaire.vote += 1;
     this.subscribeToSaveResponse(this.commentaireService.update(commentaire));
+    this.message = true;
   }
 
   protected subscribeToSaveResponse(result: Observable<HttpResponse<ICommentaire>>): void {

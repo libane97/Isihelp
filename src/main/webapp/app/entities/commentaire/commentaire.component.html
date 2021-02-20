@@ -19,6 +19,9 @@
     </div>
 
     <div class="table-responsive" id="entities" *ngIf="commentaires && commentaires.length > 0">
+        <div class="alert alert-success" *ngIf="message">
+            <span>Vous venez votez merci </span>
+        </div>
         <table class="table table-striped" aria-describedby="page-heading">
             <thead>
                 <tr>
